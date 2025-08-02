@@ -8,6 +8,19 @@ app.get("/", (req, res) => {
     message: "Welcome to Bible Wizard!",
   });
 });
+app.get("/plans", (req, res) => {
+  return res.status(200).send(
+[
+  {
+    name: "BIB 101"
+  },
+  {
+    name: "BIB 201"
+  }
+]
+
+  );
+});
 
 app.listen(port, () => {
   console.log("Listening on " + port);
